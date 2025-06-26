@@ -59,7 +59,7 @@ class _ExeContainer extends State<ExeContainer> {
               Container(
                 margin: EdgeInsets.all(12),
                 child: Text(
-                  'Hellooo!',
+                  'image$imageIndex!',
                   style: TextStyle(
                     color: Colors.blue,
                     fontSize: 30,
@@ -75,6 +75,20 @@ class _ExeContainer extends State<ExeContainer> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                 ),
+              ),
+              Container(
+                margin: EdgeInsets.all(12),
+                child: ElevatedButton(
+                  onPressed: () {
+                   setState(() {
+                     imageIndex += 1;
+                   });
+                  },
+                  child: Text('click to change the image',style: TextStyle(
+                    fontSize: 20,
+
+                  ),),
+                )
               ),
             ],
           ),
